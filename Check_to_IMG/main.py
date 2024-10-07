@@ -1,4 +1,18 @@
-from requirements import *
+import os
+
+try:
+    import requests
+except ImportError:
+    print("Trying to Install required module: requests\n")
+    os.system('python -m pip install requests')
+import requests
+
+try:
+    import imgkit
+except ImportError:
+    print("Trying to Install required module: imgkit\n")
+    os.system('python -m pip install imgkit')
+import imgkit
 
 if not os.path.isdir("..\\OUTPUT"):
     os.mkdir("..\\OUTPUT")
@@ -44,8 +58,7 @@ headers = {
               'AiMTI2LjAuNjQ3OC4xODUiKgI/MDoJIldpbmRvd3MiQggiMTUuMC4wIkoEIjY0IlJbIk'
               '5vdC9BKUJyYW5kIjt2PSI4LjAuMC4wIiwiQ'
               '2hyb21pdW0iO3Y9IjEyNi4wLjY0NzguMTg1IiwiR29vZ2xlIENocm9tZSI7dj0iMTI2L'
-              'jAuNjQ3OC4xODUiImCa0t22Bg=='
-}
+              'jAuNjQ3OC4xODUiImCa0t22Bg=='}
 
 _name = '1234567890'
 imgh = 1
